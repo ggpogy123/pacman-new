@@ -49,3 +49,28 @@ canvas {
     align-items:center;
     visibility:hidden;
 }
+
+#gameover h2{
+    color:red;
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:20px;
+    background-color:yellow;
+    color:#000;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+button:hover{
+    background-color: #ff0;
+}
+
+.phase-2 {
+    color:cyan;
+}
