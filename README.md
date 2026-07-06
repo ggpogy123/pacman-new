@@ -21,7 +21,7 @@ This version of the game takes the original game and adds a gravity mechanic. Ev
 - **Claude and Gemini:** For fixing the many bugs that came up, for the audio and for designing the maze layout.
 
 
-## Challenges I had faced
+## Challenges I had faced/am facing
 - **Git:** Did some mistake using git and messed up rebase so badly that i had to remove the repo and make a new one.
 - **Pacman Animation:** I couldnt make the logic on my own and had to use both Claude and Gemini back and forth to fix that as they kept hallucinating.
 - **Tying Animation to velocity:** I wanted to have it so that when the pacman stops moving, the animation stops but i couldnt implement this by myself.
@@ -30,6 +30,7 @@ This version of the game takes the original game and adds a gravity mechanic. Ev
 - **Pacman Animation in phase-2:** Its almost fully broken; it doesnt face the direction its going in and starts having a glitchy/stuttery animation when it sticks to a wall.
 - **Redundant curly braces that kept popping up:** Had to disable AI Autocomplete to stop this lol as i press tab when the dropdown shows up while typing the function names and it used to add the braces on its own.
 - **Friction dependency on framerate:** New concept for me that at 30fps friction is weaker than at 120fps.
+- **Ghosts vanish off in phase-2:** No idea what causes this and i am not able to fix this.
 
 ---
 
