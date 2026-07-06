@@ -25,7 +25,7 @@ This version of the game takes the original game and adds a gravity mechanic. Ev
 - **Git:** Did some mistake using git and messed up rebase so badly that i had to remove the repo and make a new one.
 - **Pacman Animation:** I couldnt make the logic on my own and had to use both Claude and Gemini back and forth to fix that as they kept hallucinating.
 - **Tying Animation to velocity:** I wanted to have it so that when the pacman stops moving, the animation stops but i couldnt implement this by myself.
-- **Github Pages just wont deploy:** It was literally stuck on "In Queue" for so long and i had to deploy it using github actions instead.
+- **Github Pages just wont deploy:** It was literally stuck on "Queued" for so long and i had to deploy it using github actions instead.
 - **Gravity logic:** Was able to visualise the logic easily but after writing it, the pacman would keep shooting through the entire map and start teleporting. Had to consult ai and cap the speed and use friction for that.
 - **Pacman Animation in phase-2:** Its almost fully broken; it doesnt face the direction its going in and starts having a glitchy/stuttery animation when it sticks to a wall.
 - **Redundant curly braces that kept popping up:** Had to disable AI Autocomplete to stop this lol as i press tab when the dropdown shows up while typing the function names and it used to add the braces on its own.
