@@ -48,6 +48,7 @@ canvas {
     justify-content:center;
     align-items:center;
     visibility:hidden;
+    gap:5px;
 }
 
 #gameover h2{
@@ -57,6 +58,7 @@ canvas {
 }
 
 button{
+    margin-top: 25px;
     padding:10px 20px;
     font-size:20px;
     background-color:yellow;

@@ -228,6 +228,7 @@ function pellet(){
                 document.getElementById('gameover').querySelector('h2').style.color='green';
                 document.getElementById('score').innerText=score;
                 document.getElementById('final_score').innerText = score;
+                document.getElementById('final_time').innerText=elapsedtime + 's';
             }
         }
     }
@@ -441,6 +442,7 @@ ghosts.forEach(ghost=>{
         document.getElementById("gameover").style.visibility='visible';
         document.getElementById('score').innerText=score;
         document.getElementById('final_score').innerText = score;
+        document.getElementById('final_time').innerText= elapsedtime + 's';
     }
     
 });
@@ -483,9 +485,15 @@ function draw(){
     else if (player.vy > 0.1) offsetangle=Math.PI/2;
     else if (player.vy < -0.1) offsetangle=-Math.PI/2;
 
-    ctx.arc(player.x,player.y,player.radius,offsetangle+0.2*Math.PI, offsetangle+1.8*Math.PI);
+    const mouthspeed=150;
+    const maxopen=0.25;
+    const moving=Math.abs(player.vx)>1 || Math.abs(player.vy)>1;
+    const bite=moving? Math.abs(Math.sin(Date.now()/mouthspeed)) * maxopen:0.2;
+
+    ctx.arc(player.x,player.y,player.radius,offsetangle+bite*Math.PI,offsetangle+(2-bite)*Math.PI);
     ctx.lineTo(player.x,player.y);
     ctx.fill();
+
 
     ghosts.forEach(ghost=> {
         ctx.fillStyle = ghost.color;
