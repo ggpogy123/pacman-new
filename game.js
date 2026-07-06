@@ -90,9 +90,16 @@ window.addEventListener('keydown',(e)=>{
         starttime=Date.now();
         lasttime=Date.now();
         e.preventDefault();
-        return
+        return;
         
-}
+    }
+
+    if(e.code==='Space'&&gameover){
+        e.preventDefault();
+        window.resetGame();
+        return;
+    }
+
 
 if (keys.hasOwnProperty(e.key)) {
     keys[e.key]=true;
