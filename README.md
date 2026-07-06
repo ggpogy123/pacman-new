@@ -1,8 +1,10 @@
-# PacMan(Twist)
+# PacMan (Twist)
 
 A browser based arcade-like game built for the **Hack Club YSWS Twist event**.
 
-This version of the game takes the orignal game and adds a gravity mechanic. Every 30 seconds, the game cycles between the orignal classic mode and the Twist mode, where the map rotates using the arrow keys instead of the pacman sprite and the pacman sprite falls due to gravity.
+This version of the game takes the original game and adds a gravity mechanic. Every 30 seconds, the game cycles between the original classic mode and the Twist mode, where the map rotates using the arrow keys instead of the pacman sprite and the pacman sprite falls due to gravity.
+
+[Play it here](https://ggpogy123.github.io/pacman-new/)
 
 
 ## Controls
@@ -16,7 +18,7 @@ This version of the game takes the orignal game and adds a gravity mechanic. Eve
 - **CSS:** Styling
 - **JS:** Main game logic
 - **Older Pacman game that i had made:** For reference
-- **Claude and Gemini:** For fixing the many bugs that came up, for the audio and for desiging the maze layout.
+- **Claude and Gemini:** For fixing the many bugs that came up, for the audio and for designing the maze layout.
 
 
 ## Challenges I had faced
@@ -25,13 +27,13 @@ This version of the game takes the orignal game and adds a gravity mechanic. Eve
 - **Tying Animation to velocity:** I wanted to have it so that when the pacman stops moving, the animation stops but i couldnt implement this by myself.
 - **Github Pages just wont deploy:** It was literally stuck on ![alt text](image.png) for so long and i had to deploy it using github actions instead.
 - **Gravity logic:** Was able to visualise the logic easily but after writing it, the pacman would keep shooting through the entire map and start teleporting. Had to consult ai and cap the speed and use friction for that.
-- **Pacman Animation in phase-2:** Its almost fully broken; it doesnt face the direction its going in and starts having a glitchy/stuttery animation when it sticks to a wall lol.
-- **Redundant curly braces that kept popping up:** Had to disable Autocomplete to stop this lol as i press tab when the dropdown shows up while typing the function names.
--- **Friction dependancy on framerate:** New concept for me that at 30fps friction is weaker than at 120fps.
+- **Pacman Animation in phase-2:** Its almost fully broken; it doesnt face the direction its going in and starts having a glitchy/stuttery animation when it sticks to a wall.
+- **Redundant curly braces that kept popping up:** Had to disable AI Autocomplete to stop this lol as i press tab when the dropdown shows up while typing the function names and it used to add the braces on its own.
+- **Friction dependency on framerate:** New concept for me that at 30fps friction is weaker than at 120fps.
 
 ---
 
-## Future Plans(Things i wanna add)
+## Future Plans (Things i wanna add)
 - Fixing Phase 2 Animations
 - Adding some background music
 - Changing the background music based on the phase of the game

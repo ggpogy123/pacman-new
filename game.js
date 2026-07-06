@@ -472,7 +472,7 @@ ghosts.forEach(ghost=>{
         document.getElementById('final_score').innerText = score;
         document.getElementById('final_time').innerText= elapsedtime + 's';
         document.getElementById('highscoredisp').innerText=highscore;
-        document.getElementById('besttimedisplay').innerText=besttime!==null ? besttime + 's':"--s";
+        document.getElementById('besttimedisp').innerText=besttime!==null ? besttime + 's':"--s";
     }
     
 });
@@ -539,6 +539,8 @@ function draw(){
         ctx.fillStyle='black';
         ctx.beginPath();
         ctx.arc(ghost.x-3, ghost.y-2,1.5,0,Math.PI*2);
+        ctx.fill();
+        ctx.beginPath();
         ctx.arc(ghost.x+3,ghost.y-2,1.5,0,Math.PI*2);
         ctx.fill();
     });
