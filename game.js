@@ -455,6 +455,9 @@ ghosts.forEach(ghost=>{
         if(ghost.x < -tilesize) ghost.x =canvas.width+tilesize;
         if(ghost.x>canvas.width+tilesize) ghost.x = -tilesize;
 
+        if(ghost.y<-tilesize) ghost.y=canvas.height+tilesize;
+        if(ghost.y>canvas.height+tilesize)ghost.y=-tilesize;
+
         
 
     }

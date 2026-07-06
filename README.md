@@ -30,7 +30,7 @@ This version of the game takes the original game and adds a gravity mechanic. Ev
 - **Pacman Animation in phase-2:** Its almost fully broken; it doesnt face the direction its going in and starts having a glitchy/stuttery animation when it sticks to a wall.
 - **Redundant curly braces that kept popping up:** Had to disable AI Autocomplete to stop this lol as i press tab when the dropdown shows up while typing the function names and it used to add the braces on its own.
 - **Friction dependency on framerate:** New concept for me that at 30fps friction is weaker than at 120fps.
-- **Ghosts vanish off in phase-2:** No idea what causes this and i am not able to fix this.
+- **Ghosts vanish off in Phase-2:** ~~ No idea what causes this ~~, Its probably fixed as i had forgot to add the boundary for the y axis, its very hard to recreate so I have no idea regarding this.
 
 ---
 
