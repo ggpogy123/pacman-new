@@ -505,6 +505,12 @@ function draw(){
         ctx.lineTo(ghost.x-ghost.radius/2,ghost.y+ghost.radius-3);
         ctx.lineTo(ghost.x-ghost.radius,ghost.y+ghost.radius);
         ctx.fill();
+
+        ctx.fillStyle='black';
+        ctx.beginPath();
+        ctx.arc(ghost.x-3, ghost.y-2,1.5,0,Math.PI*2);
+        ctx.arc(ghost.x+3,ghost.y-2,1.5,0,Math.PI*2);
+        ctx.fill();
     });
 
     ctx.restore();
