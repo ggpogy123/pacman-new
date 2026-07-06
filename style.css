@@ -57,6 +57,12 @@ canvas {
     margin-bottom:10px;
 }
 
+#gameover p[style*="color: gold"]{
+    font-weight:bold;
+    font-size:20px;
+    margin-top:5px;
+}
+
 button{
     margin-top: 25px;
     padding:10px 20px;
@@ -74,5 +80,5 @@ button:hover{
 }
 
 .phase-2 {
-    color:cyan;
+    color:orange;
 }

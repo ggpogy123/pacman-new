@@ -70,6 +70,8 @@ let gamestart=false;
 let animationID;
 let mazerotation=0;
 let lasttime=Date.now();
+let highscore=localStorage.getItem('pacman_highscore')||0;
+let besttime=localStorage.getItem('pacman_besttime') || null;
 
 
 const keys= {
@@ -226,9 +228,23 @@ function pellet(){
                 document.getElementById('gameover').style.visibility='visible';
                 document.getElementById('gameover').querySelector('h2').innerText='YOU WIN!';
                 document.getElementById('gameover').querySelector('h2').style.color='green';
+                
+                if(score>highscore){
+                    highscore=score;
+                    localStorage.setItem('pacman_highscore', highscore);
+
+                }
+
+                if(besttime===null||elapsedtime<besttime){
+                    besttime=elapsedtime;
+                    localStorage.setItem('pacman_besttime',besttime);
+                }
+                
                 document.getElementById('score').innerText=score;
                 document.getElementById('final_score').innerText = score;
                 document.getElementById('final_time').innerText=elapsedtime + 's';
+                document.getElementById('highscoredisp').innerText=highscore;
+                document.getElementById('besttimedisp').innerText=besttime+'s';
             }
         }
     }
@@ -439,10 +455,17 @@ ghosts.forEach(ghost=>{
     if(distance(player.x,player.y,ghost.x,ghost.y)<player.radius+ghost.radius){
         if(!gameover) {playsound('death');}
         gameover=true;
+
+        if(score>highscore){
+            highscore=score;
+            localStorage.setItem('pacman_highscore',highscore);
+        }
         document.getElementById("gameover").style.visibility='visible';
         document.getElementById('score').innerText=score;
         document.getElementById('final_score').innerText = score;
         document.getElementById('final_time').innerText= elapsedtime + 's';
+        document.getElementById('highscoredisp').innerText=highscore;
+        document.getElementById('besttimedisplay').innerText=besttime!==null ? besttime + 's':"--s";
     }
     
 });
